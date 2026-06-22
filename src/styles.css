@@ -9,16 +9,28 @@
   --ok: #1f7a4d;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   background: var(--bg);
   color: var(--text);
 }
 
-button, input { font: inherit; }
+button,
+input {
+  font: inherit;
+}
 
 .page {
   width: min(1120px, calc(100% - 32px));
@@ -38,14 +50,14 @@ button, input { font: inherit; }
   margin: 0 0 10px;
   color: var(--muted);
   font-size: 13px;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 h1 {
   margin: 0;
   font-size: clamp(34px, 5vw, 64px);
-  line-height: .95;
+  line-height: 0.95;
   letter-spacing: -0.055em;
   max-width: 800px;
 }
@@ -58,11 +70,14 @@ h1 {
   line-height: 1.6;
 }
 
-.progressBox, .rules, .weekHeader, .day {
+.progressBox,
+.rules,
+.weekHeader,
+.day {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(20, 20, 20, .04);
+  box-shadow: 0 20px 50px rgba(20, 20, 20, 0.04);
 }
 
 .progressBox {
@@ -95,7 +110,7 @@ h1 {
   height: 100%;
   background: var(--dark);
   border-radius: inherit;
-  transition: width .25s ease;
+  transition: width 0.25s ease;
 }
 
 .progressBox button {
@@ -112,7 +127,8 @@ h1 {
   margin-bottom: 22px;
 }
 
-.rules h2, .weekHeader h2 {
+.rules h2,
+.weekHeader h2 {
   margin: 0;
   letter-spacing: -0.03em;
 }
@@ -131,7 +147,8 @@ h1 {
   min-height: 92px;
 }
 
-.ruleGrid b, .ruleGrid span {
+.ruleGrid b,
+.ruleGrid span {
   display: block;
 }
 
@@ -164,13 +181,14 @@ h1 {
   border-color: var(--dark);
 }
 
-.weeks span, .weeks small {
+.weeks span,
+.weeks small {
   display: block;
 }
 
 .weeks small {
   color: inherit;
-  opacity: .65;
+  opacity: 0.65;
   margin-top: 6px;
 }
 
@@ -200,8 +218,13 @@ h1 {
 }
 
 .day.done {
-  border-color: rgba(31, 122, 77, .35);
-  background: #fbfffc;
+  border-color: #4ade80;
+  background: #dcfce7;
+}
+
+.day.done .columns div,
+.day.done .check {
+  background: #1dac652e;
 }
 
 .dayTop {
@@ -258,7 +281,7 @@ h4 {
   margin: 0 0 12px;
   font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   color: var(--muted);
 }
 
@@ -286,14 +309,32 @@ li {
 }
 
 @media (max-width: 900px) {
-  .hero, .columns { grid-template-columns: 1fr; }
-  .weeks { grid-template-columns: repeat(4, 1fr); }
-  .ruleGrid { grid-template-columns: repeat(2, 1fr); }
+  .hero,
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  .weeks {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .ruleGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 560px) {
-  .page { width: min(100% - 20px, 1120px); padding-top: 24px; }
-  .weeks, .ruleGrid { grid-template-columns: 1fr 1fr; }
-  .dayTop { flex-direction: column; }
-  .check { width: 100%; justify-content: center; }
+  .page {
+    width: min(100% - 20px, 1120px);
+    padding-top: 24px;
+  }
+  .weeks,
+  .ruleGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dayTop {
+    flex-direction: column;
+  }
+  .check {
+    width: 100%;
+    justify-content: center;
+  }
 }
